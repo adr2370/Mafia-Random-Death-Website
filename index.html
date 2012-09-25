@@ -22,11 +22,11 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-		<script>
+		<script type="text/javascript">
 			var deaths = new Array();
-			deaths[] = "Sup1";
-			deaths[] = "Sup2";
-			deaths[] = "Sup3";
+			deaths[deaths.length] = "Sup1";
+			deaths[deaths.length] = "Sup2";
+			deaths[deaths.length] = "Sup3";
 			function nextDeath() {
 				var death = deaths[Math.floor(Math.random()*deaths.length)];
 				$("#deathContent").val(death);
