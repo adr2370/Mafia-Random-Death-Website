@@ -22,7 +22,18 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+		<script>
+			var deaths = new Array();
+			deaths[] = "Sup1";
+			deaths[] = "Sup2";
+			deaths[] = "Sup3";
+			function nextDeath() {
+				var death = deaths[Math.floor(Math.random()*deaths.length)];
+				$("#deathContent").val(death);
+			}
+		</script>
+		<p id="deathContent">Sup.</p>
+		<div onclick="nextDeath()">Click for next death</div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
