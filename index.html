@@ -72,20 +72,28 @@
         <script src="js/main.js"></script>
 		
 		<script type="text/javascript">
-			var deaths = new Array();
-			deaths[deaths.length] = "Michael Jackson picks you up to play with you and accidentally throws you into the ceiling killing you.";
-			deaths[deaths.length] = "You were in a vegetative state for a long time on national television before being killed by your family members.";
-			deaths[deaths.length] = "You commit suicide in the reflecting pool in Washington D.C. because David Blaine told you to.";
-			deaths[deaths.length] = "You thought it would be a good idea to try to light your fart on fire. It worked.";
-			deaths[deaths.length] = "Your friend's grandpa is chasing death while death is chasing you. Death wins.";
-			deaths[deaths.length] = "Ozzy Osbourne bit your head off.";
-			deaths[deaths.length] = "The phonic monkey attacks you and stomps on your face all around the room.";
-			deaths[deaths.length] = "You and your girlfriend take off your purity rings that the Jonas Brothers wanted you to wear. You die of syphilis.";
-			deaths[deaths.length] = "You were sacrificed in the lottery to ensure a good harvest.";
-			deaths[deaths.length] = "You are the source of a major pinkeye infection and must be killed in order to cure everyone else.";
+			var deaths = [
+				"Michael Jackson picks you up to play with you and accidentally throws you into the ceiling killing you.",
+				"You were in a vegetative state for a long time on national television before being killed by your family members.",
+				"You commit suicide in the reflecting pool in Washington D.C. because David Blaine told you to.",
+				"You thought it would be a good idea to try to light your fart on fire. It worked.",
+				"Your friend's grandpa is chasing death while death is chasing you. Death wins.",
+				"Ozzy Osbourne bit your head off.",
+				"The phonic monkey attacks you and stomps on your face all around the room.",
+				"You and your girlfriend take off your purity rings that the Jonas Brothers wanted you to wear. You die of syphilis.",
+				"You were sacrificed in the lottery to ensure a good harvest.",
+				"You are the source of a major pinkeye infection and must be killed in order to cure everyone else.",
+				"You were at Meatball Mafia Monday and choked on a meatball.",
+				"YOU BLINKED.",
+				"You overdosed on the heroin hero video game.",
+				"The Joker told you how he got his scars."
+			];
 			function nextDeath() {
-				var death = deaths[Math.floor(Math.random()*deaths.length)];
+				var whichDeath=Math.floor(Math.random()*deaths.length);
+				var death = deaths[whichDeath];
+				deaths.splice(whichDeath,1);
 				$("#deathContent").html(death);
+				
 			}
 			$(function() {
 				nextDeath();
