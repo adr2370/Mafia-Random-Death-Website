@@ -62,8 +62,8 @@
 
         <!-- Add your site or application content here -->
 		<div style="text-align:center;cursor:default;">
-		<h1 id="deathContent"></h1>
 		<div class="nextdeath" onclick="nextDeath()">Next Death</div>
+		<h1 id="deathContent"></h1>
 		</div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -79,21 +79,36 @@
 				"You thought it would be a good idea to try to light your fart on fire. It worked.",
 				"Your friend's grandpa is chasing death while death is chasing you. Death wins.",
 				"Ozzy Osbourne bit your head off.",
-				"The phonic monkey attacks you and stomps on your face all around the room.",
+				"The phonics monkey attacks you and stomps on your face all around the room.",
 				"You and your girlfriend take off your purity rings that the Jonas Brothers wanted you to wear. You die of syphilis.",
 				"You were sacrificed in the lottery to ensure a good harvest.",
 				"You are the source of a major pinkeye infection and must be killed in order to cure everyone else.",
 				"You were at Meatball Mafia Monday and choked on a meatball.",
 				"YOU BLINKED.",
 				"You overdosed on the heroin hero video game.",
-				"The Joker told you how he got his scars."
+				"The Joker told you how he got his scars.",
+				"You are killed trying to rescue your delusional friend from a mechanical bull.",
+				"You make a boy band with your friends and perform at the mall. While performing you step under an elevator and it falls down, crushing you during your performance.",
+				"Rogue turkeys attack you and peck you into oblivion.",
+				"You are riding a roller coaster at your friends theme park when a spike tips over onto the track and through your skull.",
+				"You try to cheat in a sled race by putting a stack of bricks on the back of the sled. Sled hits tree, you hit tree, bricks hit you.",
+				"You are walking down the street when you spontaneously combust.",
+				"You were eaten by rats.",
+				"You are holding a giant magnet. Someone turns on a giant fan. The magnet goes through the fan, and so do you.",
+				"You get killed by a spooky goldfish.",
+				"A girl on a rooftop is pointing a gun at a boy ready to expose the corruption in the girl congress of their school. She accidentally fires into the air and the bullet hits you in the head.",
+				"You travel to the workshop of the underpants gnomes. You didn't make it past step 1.",
+				"Your teacher is trying to shoot Kathy Lee Gifford but shoots you in the head instead.",
+				"You are watching pokemon when you have a fatal seizure.",
+				"You watch a video of your friend dressed up as Brittany Spears dancing with a cardboard cutout of Justin Timberlake. You die of laughter.",
+				"You watch a video of your friend doing a piggy dance. You die of laughter.",
+				"You accidentally take 60 antacid tablets thinking they are candy. They make you so thirsty that you get a drink of water. You explode."
 			];
 			function nextDeath() {
 				var whichDeath=Math.floor(Math.random()*deaths.length);
 				var death = deaths[whichDeath];
 				deaths.splice(whichDeath,1);
 				$("#deathContent").html(death);
-				
 			}
 			$(function() {
 				nextDeath();
