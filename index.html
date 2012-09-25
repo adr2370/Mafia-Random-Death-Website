@@ -29,7 +29,7 @@
 			deaths[deaths.length] = "Sup3";
 			function nextDeath() {
 				var death = deaths[Math.floor(Math.random()*deaths.length)];
-				$("#deathContent").val(death);
+				$("#deathContent").html(death);
 			}
 		</script>
 		<p id="deathContent">Sup.</p>
